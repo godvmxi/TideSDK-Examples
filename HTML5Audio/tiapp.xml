@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <ti:app xmlns:ti='http://ti.appcelerator.org'>
 <!-- These values are edited/maintained by Titanium Developer -->
-<id>com.joshuaroesslein.html5audio</id>
+<id>com.joshroesslein.html5audio</id>
 <name>HTML5AudioDemo</name>
 <version>1.0</version>
 <publisher>joshuaroesslein</publisher>

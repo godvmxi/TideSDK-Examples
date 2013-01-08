@@ -1,0 +1,97 @@
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<script type="text/javascript">
+			function Player()
+			{
+				this.videox = document.getElementById("videox");
+				this.delay = document.getElementById("delay");
+				this.width = document.getElementById("width");
+				this.height = document.getElementById("height");
+				this.setDelay = function()
+				{
+					this.videox.delay = parseInt(this.delay.value);
+				}
+				this.setWidth= function()
+				{
+					this.videox.w = parseInt(this.width.value);
+				}
+				this.setHeight = function()
+				{
+					this.videox.h = parseInt(this.height.value);
+				}
+				this.play = function()
+				{
+					var src = document.getElementById("src").value;
+					if (!src)
+						this.videox.play();
+					else
+						this.videox.play(src);
+				}
+				this.pause= function()
+				{
+					this.videox.pause();
+				}
+				this.fullscreen = function()
+				{
+					this.videox.fullscreen();
+				}
+				this.getTimeLength = function()
+				{
+					alert(videox.getTimeLength());
+				}
+				this.getPercentPos = function()
+				{
+					alert(videox.getPercentPos());
+				}
+				this.getTimePos = function()
+				{
+					alert(videox.getTimePos());
+				}
+				this.open = function(){
+					alert(document.src.value);
+					videox.src(document.src.value);
+				}
+				this.seek= function(){
+					alert(document.pos.value);
+					videox.seek(document.pos.value);
+				}
+				this.quit= function(){
+					videox.quit();
+				}
+			}
+			var player;
+			window.onload = function()
+			{
+				player = new Player();
+			}
+		</script>
+	</head>
+	<body>
+		<object id="videox" data="file:///home/dan/starwars.mp4" type="application/x-videox" width="740" height="360"> 
+			<param name="autostart" value="false" />
+			<param name="delay" value="33" />
+		</object>
+	<!--	<embed id="videox" src="/mnt/nfs/FF.mp4" delay="33" type="application/x-videox" width="740" height="360" />
+-->		<div>
+			<p>控制</p>
+			<input type="button" onclick ="player.play()" value ="play">
+			<input type="button" onclick ="player.pause()" value ="pause">
+			<input type="button" onclick ="player.quit()" value="quit">
+			<input type="button" onclick ="player.fullscreen()" value="fullscreen">
+			<input type="button" onclick="player.getTimeLength()" value="length">
+			<input type="button" onclick="player.getTimePos()" value="time">
+			<input type="button" onclick="player.getPercentPos()"value="Percent">
+		</div>
+
+		<div>
+			<p>设置</p>
+			<div><label for="delay">延迟</label><input type="text" onchange="player.setDelay()" id="delay" /></div>
+			<div><label for="width">宽度</label><input type="text" onclick="player.setWidth()" id="width" /></div>
+			<div><label for="height">高度</label><input type="text" onchange="player.setHeight()" id="height"/></div>
+			<div><label for="src">数据</label><input type ="text" id="src"/></div>
+			<div><label for="seek">定位</label><input type ="text" onchange="player.seek()" id="seek"/></div>
+		</div>
+
+	</body>
+</html>
