@@ -1,23 +1,64 @@
 <html>
     <head>
         <title>Titanium Language Module Tester</title>
-        <script>
-            //Test php include
-            Titanium.include("php.php");
-            
-            //Test python include
-            Titanium.include("python.py");
-            
-            //Test ruby include
-            Titanium.include("ruby.rb");
-        </script>
 
-        <script>
-            //We should be able to call a method from any of these three language files now
-            alert("PHP TEST: " + my_php_function([1, 2, 3, 4]));
-            alert("PYTHON TEST: " + my_python_function([1, 2, 3, 4]));
-            alert("RUBY TEST: " + my_ruby_function([1, 2, 3, 4]));
-        </script>
+
+		<script type="text/python">
+		def my_python_function1(l):
+			return [x+4 for x in l]
+		</script>
+		<script type="text/python">
+			import "python2.py";
+		</script> 
+		<script type="text/python" src="python3.py">
+		</script>
+		
+		<script>
+			alert("hello python1 --> "+my_python_function1([1, 2, 3, 4]));
+			alert("hello python2 --> "+my_python_function2([1, 2, 3, 4]));
+			alert("hello python3 --> "+my_python_function3([1, 2, 3, 4]));
+		</script>
+
+		<script type="text/ruby">
+			def my_ruby_function1(l)
+				n = 0
+				l.each { |i| n+=i }
+				return n
+			end
+		</script>
+		<script type="text/ruby">
+			require "ruby2.rb";
+		</script>
+		<script type="text/ruby" src="ruby3.rb">
+		</script>		 
+		<script>
+			alert("hello ruby1 --> "+my_ruby_function1([4, 5, 6, 7]));
+			alert("hello ruby2 --> "+my_ruby_function2([0x1, 0x2, 0x3, 0x4]));
+			alert("hello ruby3 --> "+my_ruby_function3([0x1, 0x2, 0x3, 0x4]));
+		</script>
+
+		<script type="text/php">
+			function my_php_function1($item)
+			{
+				$result = array();
+			   for ($index = 0; $index < $item->count(); $index++)
+			   {
+				$result[] = $item[$index] + 2;
+			   }
+			   return $result;
+			}
+		</script>
+		<script type="text/php">
+			include("php2.php");
+		</script>
+		<script type="text/php" src="php3.php">
+		</script>		 
+		<script>
+			alert("hello php 1 --> "+my_php_function1([4, 5, 6, 7]));
+			alert("hello php 2--> "+ my_php_function2([0x1, 0x2, 0x3, 0x4]));
+			alert("hello php 3--> "+ my_php_function3([0x1, 0x2, 0x3, 0x4]));
+		</script>
+
     </head>
     <body style="background-color:#1c1c1c;margin:0">
         <div style="border-top:1px solid #404040">

@@ -68,7 +68,7 @@
 		</script>
 	</head>
 	<body>
-		<object id="videox" data="file:///home/dan/starwars.mp4" type="application/x-videox" width="740" height="360"> 
+		<object id="videox" data="file:///home/dan/develop/starwars.mp4" type="application/x-videox" width="740" height="360"> 
 			<param name="autostart" value="false" />
 			<param name="delay" value="33" />
 		</object>

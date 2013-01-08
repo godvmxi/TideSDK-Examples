@@ -9,8 +9,8 @@
 
 <window>
 <id>initial</id>
-<title>hellovideo</title>
-<url>http://www.baidu.com</url>
+<title>HelloWorld</title>
+<url>app://index.html</url>
 <width>700</width>
 <max-width>3000</max-width>
 <min-width>0</min-width>

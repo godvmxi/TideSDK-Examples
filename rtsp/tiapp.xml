@@ -1,4 +1,5 @@
-<ti:app xmlns:ti="http://ti.appcelerator.org">
+<?xml version='1.0' encoding='UTF-8'?>
+<ti:app xmlns:ti='http://ti.appcelerator.org'>
 <id>com.tidesdk.helloworld</id>
 <name>HelloWorld</name>
 <version>0.2.0</version>
@@ -6,11 +7,11 @@
 <url>http//tidesdk.org</url>
 <icon>default_app_logo.png</icon>
 <copyright>2012 by David Pratt</copyright>
-
+<!-- Window Definition - these values can be edited -->
 <window>
 <id>initial</id>
-<title>hellovideo</title>
-<url>http://www.baidu.com</url>
+<title>HelloWorld</title>
+<url>app://index.html</url>
 <width>700</width>
 <max-width>3000</max-width>
 <min-width>0</min-width>

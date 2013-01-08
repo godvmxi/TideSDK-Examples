@@ -2,15 +2,15 @@
 <html>
   <body>
     <h1>HTML5 Audio tag demo</h1>
-    <audio id="player" controls="controls"/>
+    <audio id="player" controls="controls" src="/home/dan/develop/tidesdk/TideSDK-Examples/HTML5Audio/Resources/science.ogg"  loop=true autoplay=true >not support</audio>
     <script>
-      window.onload = function () {
+      //window.onload = function () {
         // Set audio file to be played. We need to use Ti.File
         // to convert an app:// URL to a file:// URL so the audio tag
         // can load the media file.
-        var audioFile = Ti.Filesystem.getFile("app://Resources/science.mp3");
-        document.getElementById("player").src = audioFile.toURL();
-      }
+        //var audioFile = Ti.Filesystem.getFile("app://Resources/science.mp3");
+        //document.getElementById("player").src = audioFile.toURL();
+      //}
     </script>
   </body>
 </html>
